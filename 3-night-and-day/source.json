@@ -1,0 +1,201 @@
+[{
+	"name": "Antillean Nighthawk",
+	"count": 10,
+	"type": "night"
+}, {
+	"name": "Black-billed Cuckoo",
+	"count": 20,
+	"type": "night"
+}, {
+	"name": "Black Rail",
+	"count": 1,
+	"type": "night"
+}, {
+	"name": "Black Storm-Petrel",
+	"count": 50,
+	"type": "night"
+}, {
+	"name": "Blue Mockingbird",
+	"count": 50,
+	"type": "night"
+}, {
+	"name": "Buff-collared Nightjar",
+	"count": 30,
+	"type": "night"
+}, {
+	"name": "Chimney Swift",
+	"count": 50,
+	"type": "night"
+}, {
+	"name": "Ferruginous Pygmy-Owl",
+	"count": 30,
+	"type": "night"
+}, {
+	"name": "Common Poorwill",
+	"count": 30,
+	"type": "night"
+}, {
+	"name": "Elf Owl",
+	"count": 3,
+	"type": "night"
+}, {
+	"name": "Flammulated Owl", 
+	"count": 10,
+	"type": "night"
+}, {
+	"name": "Boreal Owl", 
+	"count": 10,
+	"type": "night"
+}, {
+	"name": "Mangrove Cuckoo", 
+	"count": 20,
+	"type": "night"
+}, {
+	"name": "Northern Fulmar", 
+	"count": 30,
+	"type": "night"
+}, {
+	"name": "Northern Hawk Owl", 
+	"count": 1,
+	"type": "night"
+}, {
+	"name": "Northern Pygmy-Owl", 
+	"count": 10,
+	"type": "night"
+}, {
+	"name": "Red-vented Bulbul", 
+	"count": 20,
+	"type": "night"
+}, {
+	"name": "Red-whiskered Bulbul", 
+	"count": 5,
+	"type": "night"
+}, {
+	"name": "Ridgway's Rail", 
+	"count": 15,
+	"type": "night"
+}, {
+	"name": "Short-eared Owl", 
+	"count": 5,
+	"type": "night"
+}, {
+	"name": "Spotted Owl", 
+	"count": 10,
+	"type": "night"
+}, {
+	"name": "Vaux's Swift", 
+	"count": 50,
+	"type": "night"
+}, {
+	"name": "Whiskered Screech-Owl", 
+	"count": 10,
+	"type": "night"
+}, {
+	"name": "Yellow-billed Cuckoo", 
+	"count": 20,
+	"type": "night"
+}, {
+	"name": "Yellow Rail", 
+	"count": 10,
+	"type": "night"
+}, {
+	"name": "American Dipper", 
+	"count": 10,
+	"type": "day"
+}, {
+	"name": "American Pipit", 
+	"count": 50,
+	"type": "day"
+}, {
+	"name": "American Wigeon", 
+	"count": 30,
+	"type": "day"
+}, {
+	"name": "Bachman's Sparrow", 
+	"count": 10,
+	"type": "day"
+}, {
+	"name": "Bank Swallow", 
+	"count": 30,
+	"type": "day"
+}, {
+	"name": "Black-backed Woodpecker", 
+	"count": 20,
+	"type": "day"
+}, {
+	"name": "Black-billed Magpie", 
+	"count": 10,
+	"type": "day"
+}, {
+	"name": "Black-chinned Sparrow", 
+	"count": 30,
+	"type": "day"
+}, {
+	"name": "Boat-tailed Grackle", 
+	"count": 15,
+	"type": "day"
+}, {
+	"name": "Broad-winged Hawk", 
+	"count": 10,
+	"type": "day"
+}, {
+	"name": "Brown Jay", 
+	"count": 50,
+	"type": "day"
+}, {
+	"name": "Brown Thrasher", 
+	"count": 20,
+	"type": "day"
+}, {
+	"name": "Rufous-backed Robin", 
+	"count": 50,
+	"type": "day"
+}, {
+	"name": "Scaled Quail", 
+	"count": 1,
+	"type": "day"
+}, {
+	"name": "Scott's Oriole", 
+	"count": 1,
+	"type": "day"
+}, {
+	"name": "Sharp-shinned Hawk", 
+	"count": 3,
+	"type": "day"
+}, {
+	"name": "Solitary Sandpiper", 
+	"count": 10,
+	"type": "day"
+}, {
+	"name": "Spot-breasted Oriole", 
+	"count": 20,
+	"type": "day"
+}, {
+	"name": "Sulphur-bellied Flycatcher", 
+	"count": 20,
+	"type": "day"
+}, {
+	"name": "Swainson's Thrush", 
+	"count": 30,
+	"type": "day"
+}, {
+	"name": "Swamp Sparrow", 
+	"count": 10,
+	"type": "day"
+}, {
+	"name": "Thick-billed Vireo", 
+	"count": 10,
+	"type": "day"
+}, {
+	"name": "Veery", 
+	"count": 5,
+	"type": "day"
+}, {
+	"name": "Verdin", 
+	"count": 5,
+	"type": "day"
+}, {
+	"name": "Western Kingbird", 
+	"count": 50,
+	"type": "day"
+}]
