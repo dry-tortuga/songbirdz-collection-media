@@ -1,0 +1,16 @@
+{
+  "name": "songbirdz-collection-media",
+  "version": "1.0.0",
+  "description": "Contains all the media (audio, images, metadata) for the Songbirdz collection.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "verify": "node verifyMedia.js"
+  },
+  "keywords": [],
+  "author": "dry-tortuga",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@openzeppelin/merkle-tree": "^1.0.7",
+    "ethers": "^6.13.4"
+  }
+}
