@@ -1,6 +1,9 @@
 # songbirdz-collection-media
 This repo holds all the media (audio, images, metadata) for the Songbirdz collection.
 
+The media is also stored in IPFS:
+- Audio & Images for the first 5,000 birds: `bafybeigpzmrjda2b3bl3wja6whj7dfxwd4zjkqo23jtg6n4rrfroh2c3eq`
+
 ## Verifying the media
 To run the media verification script:
 
