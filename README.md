@@ -4,6 +4,8 @@ This repo holds all the media (audio, images, metadata) for the Songbirdz collec
 The media is also stored in IPFS:
 - Audio & Images for the first 5,000 birds: `bafybeigpzmrjda2b3bl3wja6whj7dfxwd4zjkqo23jtg6n4rrfroh2c3eq`
 
+The `./points` folder stores JSON files containing the point logs awarded during Season 1 and Season 2.
+
 ## Verifying the media
 To run the media verification script:
 
