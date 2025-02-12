@@ -5,147 +5,162 @@ const path = require("path");
 
 const COLLECTION_SIZE = 1000;
 
-const COLLECTIONS_TO_POPULATE = [
-  {
-    name: "0-picasso-genesis",
-    number: 0,
-    merkleTreeRoot:
-      "0x5eb5e6c29aeeeca6d18591b5857bb3732385b031b324a4a7e5ce0d93be4f2b96",
-  },
-  {
-    name: "1-deep-blue",
-    number: 1,
-    merkleTreeRoot:
-      "0x0fd31aa0cf9ce48e13dd99ecda792226242ce7c5e98bf99fc19c124f815b67db",
-  },
-  {
-    name: "2-small-and-mighty",
-    number: 2,
-    merkleTreeRoot:
-      "0xa0f7b9e7f1e8429b619ed5656b695085e10244be698636097f519ea4e789777e",
-  },
-  {
-    name: "3-night-and-day",
-    number: 3,
-    merkleTreeRoot:
-      "0xc5a013e8cdd4cdeb9179693293f7aca4047af04aa941dacf12a5347fc0b09477",
-  },
-  {
-    name: "4-fire-and-ice",
-    number: 4,
-    merkleTreeRoot:
-      "0x7d91627265e4a50df86e7b074cab652f298ab617b65c1f0a3a149aa786a1d504",
-  },
+const COLLECTIONS_TO_VERIFY = [
+	{
+		name: "0-picasso-genesis",
+		number: 0,
+		merkleTreeRoot: "0x5eb5e6c29aeeeca6d18591b5857bb3732385b031b324a4a7e5ce0d93be4f2b96",
+	},
+	{
+		name: "1-deep-blue",
+		number: 1,
+		merkleTreeRoot: "0x0fd31aa0cf9ce48e13dd99ecda792226242ce7c5e98bf99fc19c124f815b67db",
+	},
+	{
+		name: "2-small-and-mighty",
+		number: 2,
+		merkleTreeRoot: "0xa0f7b9e7f1e8429b619ed5656b695085e10244be698636097f519ea4e789777e",
+	},
+	{
+		name: "3-night-and-day",
+		number: 3,
+		merkleTreeRoot: "0xc5a013e8cdd4cdeb9179693293f7aca4047af04aa941dacf12a5347fc0b09477",
+	},
+	{
+		name: "4-fire-and-ice",
+		number: 4,
+		merkleTreeRoot: "0x7d91627265e4a50df86e7b074cab652f298ab617b65c1f0a3a149aa786a1d504",
+	},
+	{
+		name: "5-predator-and-prey",
+		number: 5,
+		merkleTreeRoot: "0xa28dd33ab13f6eaf5f28a9d444ed2b9ae3fd3be437babede46ed9266e9e7b82c",
+	},
+	{
+		name: "6-love-birds",
+		number: 6,
+		merkleTreeRoot: "0x1119ce5125d4ccc90d4d8a21139b87ec4e168c711b68e90772537a0a5cd40a7e"
+	}
 ];
 
 (() => {
-  let numMediaValidated = 0;
 
-  for (let i = 0; i < COLLECTIONS_TO_POPULATE.length; i++) {
-    const collection = COLLECTIONS_TO_POPULATE[i];
+	let numMediaValidated = 0;
 
-    console.log(
-      `---- Verifying media for the ${collection.name} collection ----`,
-    );
+	for (let i = 0; i < COLLECTIONS_TO_VERIFY.length; i++) {
 
-    // Load the merkle tree
+		const collection = COLLECTIONS_TO_VERIFY[i];
 
-    const merkleTree = StandardMerkleTree.load(
-      JSON.parse(fs.readFileSync(`./${collection.name}/tree.json`, "utf8")),
-    );
+		console.log(
+			`---- Verifying media for the ${collection.name} collection ----`,
+		);
 
-    console.log("Merkle Root:", merkleTree.root);
+		// Load the merkle tree
 
-    if (merkleTree.root !== collection.merkleTreeRoot) {
-      throw new Error(
-        `Invalid value=${merkleTree.root} for the merkle tree root!`,
-      );
-    }
+		const merkleTree = StandardMerkleTree.load(
+			JSON.parse(fs.readFileSync(`./${collection.name}/tree.json`, "utf8")),
+		);
 
-    // Load the species names for the collection
-    const speciesNames = fs
-      .readFileSync(`./${collection.name}/key.txt`, "utf8")
-      .split(/\r?\n/);
+		console.log("Merkle Root:", merkleTree.root);
 
-    for (let j = 0; j < COLLECTION_SIZE; j++) {
-      // Get the unique ID of the bird relative to the entire 10000
-      const birdId = i * COLLECTION_SIZE + j;
+		if (merkleTree.root !== collection.merkleTreeRoot) {
+			throw new Error(
+				`Invalid value=${merkleTree.root} for the merkle tree root!`,
+			);
+		}
 
-      const name = speciesNames[j];
+		// Load the species names for the collection
+		const speciesNames = fs
+			.readFileSync(`./${collection.name}/key.txt`, "utf8")
+			.split(/\r?\n/);
 
-      // Load the audio file for the bird
-      const audioFile = fs.readFileSync(
-        `./${collection.name}/audio/${birdId}.mp3`,
-      );
+		for (let j = 0; j < COLLECTION_SIZE; j++) {
 
-      // Load the image file for the bird
-      const imageFile = fs.readFileSync(
-        `./${collection.name}/images-hidden/${birdId}.jpg`,
-      );
+			// Get the unique ID of the bird relative to the entire 10000
+			const birdId = i * COLLECTION_SIZE + j;
 
-      // Generate hash values for the species name, audio file, and image file
+			const name = speciesNames[j];
 
-      const speciesHash = ethers.keccak256(ethers.toUtf8Bytes(name));
+			// Load the audio file for the bird
+			const audioFile = fs.readFileSync(
+				`./${collection.name}/audio/${birdId}.mp3`,
+			);
 
-      const audioFileBytes = new Uint8Array(audioFile);
-      const audioHash = ethers.keccak256(audioFileBytes);
+			// Load the image file for the bird
+			const imageFile = fs.readFileSync(
+				`./${collection.name}/images-hidden/${birdId}.jpg`,
+			);
 
-      const imageFileBytes = new Uint8Array(imageFile);
-      const imageHash = ethers.keccak256(imageFileBytes);
+			// Generate hash values for the species name, audio file, and image file
 
-      console.log(
-        `${birdId}: species=${name}, audio=${audioFileBytes.length}, image=${imageFileBytes.length}`,
-      );
+			const speciesHash = ethers.keccak256(ethers.toUtf8Bytes(name));
 
-      // Check for a leaf in the merkle tree matching the hash value
-      // for the bird's species, audio, and image
+			const audioFileBytes = new Uint8Array(audioFile);
+			const audioHash = ethers.keccak256(audioFileBytes);
 
-      let speciesProof = false,
-        audioProof = false,
-        imageProof = false;
+			const imageFileBytes = new Uint8Array(imageFile);
+			const imageHash = ethers.keccak256(imageFileBytes);
 
-      for (const [i, v] of merkleTree.entries()) {
-        if (v[0] === speciesHash && v[1] === `${birdId}-species`) {
-          speciesProof = true;
-        } else if (v[0] === audioHash && v[1] === `${birdId}-audio`) {
-          audioProof = true;
-        } else if (v[0] === imageHash && v[1] === `${birdId}-image`) {
-          imageProof = true;
-        }
-      }
+			console.log(
+				`${birdId}: species=${name}, audio=${audioFileBytes.length}, image=${imageFileBytes.length}`,
+			);
 
-      if (!speciesProof) {
-        throw new Error(
-          `Missing "species" leaf in merkle tree for birdId=${birdId}!`,
-        );
-      }
+			// Check for a leaf in the merkle tree matching the hash value
+			// for the bird's species, audio, and image
 
-      if (!audioProof) {
-        throw new Error(
-          `Missing "audio" leaf in merkle tree for birdId=${birdId}!`,
-        );
-      }
+			let speciesProof = false,
+			audioProof = false,
+			imageProof = false;
 
-      if (!imageProof) {
-        throw new Error(
-          `Missing "image" leaf in merkle tree for birdId=${birdId}!`,
-        );
-      }
+			for (const [i, v] of merkleTree.entries()) {
 
-      numMediaValidated += 3;
-    }
+				if (v[0] === speciesHash && v[1] === `${birdId}-species`) {
+					speciesProof = true;
+				} else if (v[0] === audioHash && v[1] === `${birdId}-audio`) {
+					audioProof = true;
+				} else if (v[0] === imageHash && v[1] === `${birdId}-image`) {
+					imageProof = true;
+				}
 
-    console.log("--------------------------------------------------");
-  }
+			}
 
-  if (
-    numMediaValidated !==
-    COLLECTION_SIZE * COLLECTIONS_TO_POPULATE.length * 3
-  ) {
-    throw new Error(
-      `Invalid number of media items validated for all the collections!`,
-    );
-  } else {
-    console.log("------------- ALL DONE :) ----------------------");
-  }
+			if (!speciesProof) {
+				throw new Error(
+					`Missing "species" leaf in merkle tree for birdId=${birdId}!`,
+				);
+			}
+
+			if (!audioProof) {
+				throw new Error(
+					`Missing "audio" leaf in merkle tree for birdId=${birdId}!`,
+				);
+			}
+
+			if (!imageProof) {
+				throw new Error(
+					`Missing "image" leaf in merkle tree for birdId=${birdId}!`,
+				);
+			}
+
+			numMediaValidated += 3;
+
+		}
+
+		console.log("--------------------------------------------------");
+
+	}
+
+	if (
+		numMediaValidated !==
+		COLLECTION_SIZE * COLLECTIONS_TO_VERIFY.length * 3
+	) {
+
+		throw new Error(
+			`Invalid number of media items validated for all the collections!`,
+		);
+
+	} else {
+		console.log("------------- ALL DONE :) ----------------------");
+	}
+
 })();
