@@ -40,7 +40,12 @@ const COLLECTIONS_TO_VERIFY = [
 		name: "6-love-birds",
 		number: 6,
 		merkleTreeRoot: "0x1119ce5125d4ccc90d4d8a21139b87ec4e168c711b68e90772537a0a5cd40a7e"
-	}
+	},
+	{
+		name: "7-spring-hatchlings",
+		number: 7,
+		merkleTreeRoot: "0xda2070ef627da6f6395a1a7c08cd115d7d2d0aa83456cf90d2cc52077e2bb36f"
+	},
 ];
 
 (() => {
