@@ -10,6 +10,7 @@ The media is also stored in IPFS:
 - [5-predator-and-prey](https://gateway.lighthouse.storage/ipfs/bafybeicwqk2bcgpfojh63o4txc5jezkj6oobqcmnu6he5uueh26lfd7w6u)
 - [6-love-birds](https://gateway.lighthouse.storage/ipfs/bafybeibeegccbcxn3ofyor7yn6poodfc3tu2vhd3v6dtpxoqav4n33j5uq)
 - [7-hatchlings](https://gateway.lighthouse.storage/ipfs/bafybeiecvcrprcqhssunvhwadcg7eztqlnxwek7czsvnkezozqyoz6mydm)
+- [8-masters-of-disguise](https://gateway.lighthouse.storage/ipfs/bafybeigrv7kzq352xto7eptiowppuan2gmqr4tdlg37qf2lpuijbfluv3u)
 
 2. Install dependencies:
 ```bash
