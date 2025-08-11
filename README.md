@@ -1,4 +1,5 @@
 # songbirdz-collection-media
+
 This repo holds all the media (audio, images, metadata) for the Songbirdz collection.
 
 The media is also stored in IPFS:
@@ -23,3 +24,19 @@ node verifyMedia.js
 ```
 
 This will check that all media files match the merkle tree in the solidity contract on Base and report any discrepancies.
+
+## ./points
+
+This folder stores the points history for each of the past seasons of the Songbirdz onchain bird watching seasons.
+
+- Season 1: Big Onchain Summer: 04-04-2024 to 08-31-2024.
+- Season 2: Big Onchain Fall: 09-01-2024 to 11-30-2024.
+- Season 3: Big Onchain Winter: 12-01-2024 to 02-28-2025.
+- Season 4: Big Onchain Spring: 03-01-2025 to 05-31-2025.
+
+## ./airdrops
+
+This folder contains two CSV files that can be used when targeting our most active users for airdrops or allowlists for upcoming mints.
+
+- `top-10-gtd.csv`: The first 10 users to include (guaranteed).
+- `top-10-wl.csv`: An additional 10 users to include (white-listed).
