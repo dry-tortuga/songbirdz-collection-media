@@ -29,10 +29,11 @@ This will check that all media files match the merkle tree in the solidity contr
 
 This folder stores the points history for each of the past seasons of the Songbirdz onchain bird watching seasons.
 
-- Season 1: Big Onchain Summer: 04-04-2024 to 08-31-2024.
-- Season 2: Big Onchain Fall: 09-01-2024 to 11-30-2024.
-- Season 3: Big Onchain Winter: 12-01-2024 to 02-28-2025.
-- Season 4: Big Onchain Spring: 03-01-2025 to 05-31-2025.
+- `Season 1`: Big Onchain Summer: 04-04-2024 to 08-31-2024.
+- `Season 2`: Big Onchain Fall: 09-01-2024 to 11-30-2024.
+- `Season 3`: Big Onchain Winter: 12-01-2024 to 02-28-2025.
+- `Season 4`: Big Onchain Spring: 03-01-2025 to 05-31-2025.
+- `Daily Streak Tracker`: A backup of the daily streak tracker data at a point in time.
 
 ## ./airdrops
 
