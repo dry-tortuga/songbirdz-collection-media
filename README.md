@@ -12,6 +12,7 @@ The media is also stored in IPFS:
 - [6-love-birds](https://gateway.lighthouse.storage/ipfs/bafybeibeegccbcxn3ofyor7yn6poodfc3tu2vhd3v6dtpxoqav4n33j5uq)
 - [7-hatchlings](https://gateway.lighthouse.storage/ipfs/bafybeiecvcrprcqhssunvhwadcg7eztqlnxwek7czsvnkezozqyoz6mydm)
 - [8-masters-of-disguise](https://gateway.lighthouse.storage/ipfs/bafybeigrv7kzq352xto7eptiowppuan2gmqr4tdlg37qf2lpuijbfluv3u)
+- [9-final-migration](TBD)
 
 2. Install dependencies:
 ```bash
