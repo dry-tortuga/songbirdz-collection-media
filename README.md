@@ -12,7 +12,7 @@ The media is also stored in IPFS:
 - [6-love-birds](https://gateway.lighthouse.storage/ipfs/bafybeibeegccbcxn3ofyor7yn6poodfc3tu2vhd3v6dtpxoqav4n33j5uq)
 - [7-hatchlings](https://gateway.lighthouse.storage/ipfs/bafybeiecvcrprcqhssunvhwadcg7eztqlnxwek7czsvnkezozqyoz6mydm)
 - [8-masters-of-disguise](https://gateway.lighthouse.storage/ipfs/bafybeigrv7kzq352xto7eptiowppuan2gmqr4tdlg37qf2lpuijbfluv3u)
-- [9-final-migration](TBD)
+- [9-final-migration](https://gateway.lighthouse.storage/ipfs/bafybeigfrszayz7aqg2oeze7l6qii5inq3npu25n3hzngiqsjsqkwk2ayq)
 
 2. Install dependencies:
 ```bash
@@ -30,15 +30,16 @@ This will check that all media files match the merkle tree in the solidity contr
 
 This folder stores the points history for each of the past seasons of the Songbirdz onchain bird watching seasons.
 
-- `Season 1`: Big Onchain Summer: 04-04-2024 to 08-31-2024.
-- `Season 2`: Big Onchain Fall: 09-01-2024 to 11-30-2024.
-- `Season 3`: Big Onchain Winter: 12-01-2024 to 02-28-2025.
-- `Season 4`: Big Onchain Spring: 03-01-2025 to 05-31-2025.
-- `Daily Streak Tracker`: A backup of the daily streak tracker data at a point in time.
+- `Season 1`: "Big Onchain Summer": 04-04-2024 to 08-31-2024.
+- `Season 2`: "Big Onchain Fall": 09-01-2024 to 11-30-2024.
+- `Season 3`: "Big Onchain Winter": 12-01-2024 to 02-28-2025.
+- `Season 4`: "Big Onchain Spring": 03-01-2025 to 05-31-2025.
+- `Season 5`: "Big Onchain Summer 2.0": 06-01-2025 to 08-31-2025.
+- `Daily Streak Tracker`: A backup of the daily streak tracker data at a point-in-time.
+- `Memory Match Log`: A backup of the memory match game data at a point-in-time.
 
 ## ./airdrops
 
-This folder contains two CSV files that can be used when targeting our most active users for airdrops or allowlists for upcoming mints.
+This folder contains a CSV file that can be used when targeting our most active users for airdrops/allowlists for upcoming NFT mints.
 
-- `top-10-gtd.csv`: The first 10 users to include (guaranteed).
-- `top-10-wl.csv`: An additional 10 users to include (white-listed).
+- `top-10.csv`: The first 10 users to include, i.e. our most active Songbirdz holders.
